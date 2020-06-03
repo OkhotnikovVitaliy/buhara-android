@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="256dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    android:background="?attr/selectableItemBackground"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    card_view:cardBackgroundColor="#ffffff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardBackgroundColor="#ffffff">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:transitionName="@string/transition_string" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/favorite"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="6dp"
+            android:elevation="2dp"
+            android:src="@drawable/ic_like_false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/cera_pro_medium"
+            android:gravity="center"
+            android:maxEms="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Name asd asd asd"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_image" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/cera_pro_medium"
+            android:gravity="center"
+            android:maxEms="2"
+            android:maxLines="2"
+            android:text="120 сом"
+            android:textColor="#EB5757"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+        <TextView
+            android:id="@+id/dish_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/cera_pro_medium"
+            android:gravity="center"
+            android:text="0 шт"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/minus"
+            app:layout_constraintTop_toTopOf="@id/minus" />
+
+
+        <ImageView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/minus"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/card_rounded_minus"
+            android:contentDescription="@null"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_minus_bkg"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/plus"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/card_rounded_plus"
+            android:contentDescription="@null"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_plus_bkg"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+

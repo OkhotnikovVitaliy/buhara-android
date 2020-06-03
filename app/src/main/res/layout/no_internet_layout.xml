@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container_no_internet"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/cera_pro_bold"
+        android:layout_marginEnd="24dp"
+        android:text="Нет интернет соединения пожалуйста попробуйте позже"
+        app:layout_constraintBottom_toTopOf="@id/btn_connect_internet" />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_marginTop="60dp"
+        android:id="@+id/btn_connect_internet"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Повтор"
+        android:fontFamily="@font/cera_pro_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_internet"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

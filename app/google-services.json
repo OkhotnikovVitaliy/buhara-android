@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "900335696716",
+    "firebase_url": "https://buhara-5efa6.firebaseio.com",
+    "project_id": "buhara-5efa6",
+    "storage_bucket": "buhara-5efa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900335696716:android:a8f1320fe75a61a37eede9",
+        "android_client_info": {
+          "package_name": "kg.buhara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900335696716-6n1ag1o8fr46s1hhmggb9tq94cdir0eg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.buhara",
+            "certificate_hash": "d585dda58829fd82b45e8f9a7cf02ba653c79c9b"
+          }
+        },
+        {
+          "client_id": "900335696716-jqnogcg8igm4kaqjf2gnte5uh202ti7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.buhara",
+            "certificate_hash": "87559dc63e990d4e1998df90108516e54eb2bf62"
+          }
+        },
+        {
+          "client_id": "900335696716-cm2pec12bj7md3ullhr6fmdrt5855r9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_Bc4nXwUoJVE6Z9amStzMtECHtqcbWiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900335696716-cm2pec12bj7md3ullhr6fmdrt5855r9s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "900335696716-ss6ktfqji3b41imu0o7fnt0jv4p8rm7l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pro.sunrise.Buhara"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

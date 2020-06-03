@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="281dp"
+                android:layout_marginTop="-25dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="25dp"
+                        android:scaleType="centerCrop"
+                        android:transitionName="@string/transition_string"
+                        app:layout_constraintDimensionRatio="1:1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                app:layout_collapseMode="pin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:theme="@style/MyToolbarWhite">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/img_like"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:elevation="5dp"
+                        android:src="@drawable/ic_like_false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:background="@drawable/gradient_transparent"
+                android:elevation="2dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="3dp"
+                app:layout_collapseMode="pin"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/titleDishToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginEnd="56dp"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:gravity="center"
+                    android:maxEms="2"
+                    android:maxLines="2"
+                    android:text="Buhara Assorti"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titlePromotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="@string/message_description"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/cera_pro_light"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/titlePromotion" />
+
+            <TextView
+                android:id="@+id/hint_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="@string/weight"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="400 "
+                android:textColor="#EB5757"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/hint_weight"
+                app:layout_constraintTop_toBottomOf="@id/description" />
+
+            <TextView
+                android:id="@+id/hint_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="@string/price"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/price"
+                app:layout_constraintTop_toBottomOf="@id/description" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="400 "
+                android:textColor="#EB5757"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_gravity="bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                app:layout_constraintBottom_toTopOf="@id/btnGoToBasket"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--                <ImageView-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    android:id="@+id/minus"-->
+                <!--                    android:layout_width="24dp"-->
+                <!--                    android:layout_height="24dp"-->
+                <!--                    android:layout_margin="1dp"-->
+                <!--                    android:background="@drawable/card_rounded_minus"-->
+                <!--                    android:elevation="3dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:padding="6dp"-->
+                <!--                    android:src="@drawable/ic_minus"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+                <TextView
+                    android:id="@+id/dish_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:gravity="center"
+                    android:text="0 шт"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!--                <ImageView-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    android:id="@+id/plus"-->
+                <!--                    android:layout_width="24dp"-->
+                <!--                    android:layout_height="24dp"-->
+                <!--                    android:layout_margin="1dp"-->
+                <!--                    android:background="@drawable/card_rounded_minus"-->
+                <!--                    android:elevation="3dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:padding="6dp"-->
+                <!--                    android:src="@drawable/ic_plus"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/minus"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_margin="2dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/card_rounded_minus"
+                    android:elevation="1dp"
+                    android:src="@drawable/ic_minus_bkg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/plus"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_margin="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/card_rounded_plus"
+                    android:elevation="1dp"
+                    android:src="@drawable/ic_plus_bkg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/btnGoToBasket"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_shape_primary"
+                android:fontFamily="@font/cera_pro_medium"
+                android:text="@string/go_to_menu"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <include layout="@layout/layout_progress"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

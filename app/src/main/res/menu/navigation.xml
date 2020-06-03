@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_restaurant"
+        android:icon="@drawable/restaurant"
+        android:title="@string/restaurant" />
+
+    <item
+        android:id="@+id/navigation_delivery"
+        android:icon="@drawable/delivery"
+        android:title="@string/delivery" />
+
+    <item
+        android:id="@+id/navigation_qr"
+        android:icon="@drawable/ic_center"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/favorite"
+        android:title="@string/favorite" />
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/cart"
+        android:title="@string/cart" />
+
+</menu>
